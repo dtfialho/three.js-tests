@@ -15,4 +15,12 @@ const mesh = new THREE.Mesh(geometry, material);
 mesh.position.set(0, 0, -1000);
 
 scene.add(mesh);
-renderer.render(scene, camera);
+
+requestAnimationFrame(render);
+
+function render() {
+    mesh.rotation.x += 0.1;
+    mesh.rotation.y += 0.1;
+    renderer.render(scene, camera);
+    requestAnimationFrame(render);
+}
