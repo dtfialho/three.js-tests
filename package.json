@@ -1,7 +1,10 @@
 {
-  "name": "three.js",
+  "name": "three.js-tests",
+  "author": "Diego T. Fialho <diego.tfialho@gmail.com>",
+  "description": "Just a repository for a few tests with three.js",
+  "homepage": "https://github.com/dtfialho/three.js-tests#readme",
+  "repository": "git@github.com:dtfialho/three.js-tests.git",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "three": "^0.119.1"
