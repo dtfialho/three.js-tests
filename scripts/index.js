@@ -1,3 +1,4 @@
+let animationId
 const root = document.querySelector('#root');
 const renderer = new THREE.WebGLRenderer({ canvas: root, antialias: true });
 
@@ -23,11 +24,11 @@ mesh.position.set(0, 0, -1000);
 
 scene.add(mesh);
 
-requestAnimationFrame(render);
+animationId = requestAnimationFrame(render);
 
 function render() {
     mesh.rotation.x += 0.01;
     mesh.rotation.y += 0.01;
     renderer.render(scene, camera);
-    requestAnimationFrame(render);
+    animationId = requestAnimationFrame(render);
 }
