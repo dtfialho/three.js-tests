@@ -12,8 +12,11 @@ const scene = new THREE.Scene();
 const ambientLight = THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 
+const pointLight = THREE.PointLight(0xffffff, 0.5);
+scene.add(pointLight);
+
 const geometry = new THREE.CubeGeometry(100, 100, 100);
-const material = new THREE.MeshBasicMaterial();
+const material = new THREE.MeshLambertMaterial({ color: 0xf3ffe2 });
 const mesh = new THREE.Mesh(geometry, material);
 
 mesh.position.set(0, 0, -1000);
@@ -23,8 +26,8 @@ scene.add(mesh);
 requestAnimationFrame(render);
 
 function render() {
-    mesh.rotation.x += 0.1;
-    mesh.rotation.y += 0.1;
+    mesh.rotation.x += 0.01;
+    mesh.rotation.y += 0.01;
     renderer.render(scene, camera);
     requestAnimationFrame(render);
 }
