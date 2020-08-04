@@ -9,10 +9,10 @@ const aspect = window.innerWidth / window.innerHeight;
 const camera = new THREE.PerspectiveCamera(35, aspect, 0.1, 3000);
 const scene = new THREE.Scene();
 
-const ambientLight = THREE.AmbientLight(0xffffff, 0.5);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 
-const pointLight = THREE.PointLight(0xffffff, 0.5);
+const pointLight = new THREE.PointLight(0xffffff, 0.5);
 scene.add(pointLight);
 
 const geometry = new THREE.CubeGeometry(100, 100, 100);
